@@ -35,12 +35,16 @@
     <div class="footer-newsletter-row">
       <div class="footer-newsletter-left">
         <p class="footer-newsletter-label">Anmelden für Neuigkeiten</p>
-        <form class="footer-form" onsubmit="window.open('http://eepurl.com/0ffZ4WLj6E','_blank'); return false;">
-          <input type="email" class="footer-input" placeholder="E-MAIL" />
-          <input type="text" class="footer-input" placeholder="VORNAME" />
-          <input type="text" class="footer-input" placeholder="NACHNAME" />
+        <form class="footer-form" name="newsletter" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form">
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="hidden" name="bot-field" />
+          <input type="email" name="email" class="footer-input" placeholder="E-MAIL" required />
+          <input type="text" name="vorname" class="footer-input" placeholder="VORNAME" required />
+          <input type="text" name="nachname" class="footer-input" placeholder="NACHNAME" required />
           <button type="submit" class="footer-submit">ANMELDEN</button>
         </form>
+        <p id="newsletter-success" style="display:none; margin-top:12px; font-style:italic;">Danke! Sie erhalten in Kürze eine Bestätigungsmail.</p>
+        <p id="newsletter-error" style="display:none; margin-top:12px; color:#c00;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>
       </div>
       <div class="footer-social">
         <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon-filled">
@@ -74,6 +78,23 @@
     </div>
 
   </footer>
+
+  <script>
+    document.getElementById('newsletter-form')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      try {
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('newsletter-success').style.display = 'block';
+        } else { throw new Error(); }
+      } catch {
+        document.getElementById('newsletter-error').style.display = 'block';
+      }
+    });
+  </script>
 
   <script>
     if (window.netlifyIdentity) {

@@ -110,20 +110,15 @@ nav {
   padding: 80px 40px 60px;
 }
 
-.hero-title-wrapper {
-  display: inline-block;
-  border: 2px solid var(--text);
-  border-radius: 14px;
-  padding: 18px 56px;
+.hero-logo-wrapper {
   margin-bottom: 36px;
 }
 
-.hero-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.1;
+.hero-wordmark {
+  width: min(600px, 85vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -479,17 +474,13 @@ footer {
 
 .footer-brand-wrapper {
   display: inline-block;
-  border: 3px solid var(--text);
-  border-radius: 14px;
-  padding: 22px 80px;
 }
 
-.footer-brand {
-  font-size: clamp(2rem, 5vw, 3.6rem);
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  line-height: 1;
+.footer-wordmark {
+  width: min(500px, 80vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-copy {

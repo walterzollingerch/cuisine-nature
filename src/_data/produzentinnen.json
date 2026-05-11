@@ -1,0 +1,30 @@
+{
+  "hero_image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=1600&q=80",
+  "intro_text": "Hinter jedem Produkt steckt eine Geschichte. Unsere Produzent:innen sind leidenschaftliche Menschen, die mit Herzblut und Respekt für die Natur arbeiten. Lernen Sie sie kennen.",
+  "highlight_image": "https://images.unsplash.com/photo-1563565374-f43d5bbc8ede?w=1600&q=80",
+  "highlight_title": "Direkt von der Quelle",
+  "highlight_text": "Alle Produkte, die Sie bei Cuisine Nature finden, kommen direkt von unseren Produzent:innen – ohne Umwege, ohne Kompromisse. Frische, Qualität und Vertrauen stehen bei uns an erster Stelle.",
+  "items": [
+    {
+      "name": "Herr Muster",
+      "text": "Mit über zwanzig Jahren Erfahrung in der nachhaltigen Landwirtschaft hat Herr Muster einen Betrieb aufgebaut, der saisonale Qualität mit ökologischer Verantwortung verbindet. Seine Leidenschaft gilt dem Boden und allem, was daraus wächst.\n\nAuf seinem Hof in der Region Zürich erzeugt er Gemüse und Kräuter, die keine langen Transportwege kennen – frisch, regional, ehrlich.",
+      "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=900&q=80",
+      "background": "bg-green",
+      "reversed": false
+    },
+    {
+      "name": "Herr Muster",
+      "text": "Als Quereinsteiger fand er in der Permakultur seine Berufung. Auf seiner Parzelle am Waldrand wächst eine beeindruckende Vielfalt – von alten Gemüsesorten bis hin zu exotischen Kräutern, die man sonst kaum findet.\n\nSein Wissen gibt er gerne weiter – bei Hoffesten, Workshops und natürlich bei unseren gemeinsamen Events.",
+      "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&q=80",
+      "background": "bg-blue",
+      "reversed": true
+    },
+    {
+      "name": "Frau Muster",
+      "text": "Frau Muster bewirtschaftet einen kleinen Familienbetrieb, der seit drei Generationen in Familienbesitz ist. Mit viel Sorgfalt und traditionellem Handwerk produziert sie saisonales Gemüse, Beeren und Hochstammobst.\n\nWas sie anpflanzt, wird geerntet, wenn es reif ist – nicht früher, nicht später.",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80",
+      "background": "bg-green-light",
+      "reversed": false
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+---
+layout: base.njk
+title: Haus am See – Cuisine Nature
+activePage: haus-am-see
+---
+
+<div class="page-hero">
+  <img src="{{ haus_am_see.hero_image }}" alt="Haus am See bei Nacht" />
+</div>
+
+<section style="text-align:center; padding: 72px 80px;">
+  <div class="section-center">
+    <h1 class="section-title">Haus am See</h1>
+    <p class="section-text">{{ haus_am_see.intro_text | nl2br | safe }}</p>
+  </div>
+</section>
+
+<div class="slider" id="slider">
+  <div class="slider-track" id="sliderTrack">
+    {% for slide in haus_am_see.slider_images %}
+    <img src="{{ slide.url }}" alt="{{ slide.alt }}" />
+    {% endfor %}
+  </div>
+  <button class="slider-btn prev" onclick="slide(-1)">&#8249;</button>
+  <button class="slider-btn next" onclick="slide(1)">&#8250;</button>
+  <div class="slider-dots">
+    {% for slide in haus_am_see.slider_images %}
+    <button class="slider-dot {{ 'active' if loop.first else '' }}" onclick="goTo({{ loop.index0 }})"></button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="two-col bg-green-light">
+  <div class="two-col-content">
+    <h2 class="section-title">{{ haus_am_see.contact_name }}</h2>
+    <p class="section-text">{{ haus_am_see.contact_text }}</p>
+    <ul class="bullets">
+      {% for bullet in haus_am_see.contact_bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    <div class="btn-group">
+      <a href="#anfrage" class="btn">Kontakt aufnehmen</a>
+    </div>
+  </div>
+  <div class="two-col-image">
+    <img src="{{ haus_am_see.contact_image }}" alt="{{ haus_am_see.contact_name }}" />
+  </div>
+</div>
+
+<section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
+  <div class="section-center">
+    <h2 class="section-title">{{ haus_am_see.booking_title }}</h2>
+    <p class="section-text">{{ haus_am_see.booking_text | nl2br | safe }}</p>
+    <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+      <a href="#anfrage" class="btn btn-dark">Anfrage senden</a>
+      <a href="/produkte/" class="btn">Kulinarik entdecken</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  let current = 0;
+  const total = {{ haus_am_see.slider_images | length }};
+
+  function updateSlider() {
+    document.getElementById('sliderTrack').style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function slide(dir) {
+    current = (current + dir + total) % total;
+    updateSlider();
+  }
+
+  function goTo(i) {
+    current = i;
+    updateSlider();
+  }
+
+  setInterval(() => slide(1), 5000);
+</script>

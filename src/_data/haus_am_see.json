@@ -1,0 +1,19 @@
+{
+  "hero_image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80",
+  "intro_text": "Unser Haus am See ist ein Ort voller Atmosphäre und Eleganz. Eingebettet in eine traumhafte Seelandschaft bieten wir den perfekten Rahmen für private Feiern, exklusive Firmenevents und stimmungsvolle Dinner unter freiem Himmel.\n\nDas historische Gebäude mit seinem charmanten Innenhof und der direkten Seelage schafft eine unvergessliche Kulisse – zu jeder Jahreszeit, bei jedem Anlass.",
+  "slider_images": [
+    { "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80", "alt": "Event Venue" },
+    { "url": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80", "alt": "Abendstimmung am See" },
+    { "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80", "alt": "Festliches Dinner" }
+  ],
+  "contact_name": "Herr Muster",
+  "contact_text": "Als Eventkoordinator steht Herr Muster Ihnen von der ersten Idee bis zum letzten Tanzschritt zur Seite. Mit langjähriger Erfahrung in der Eventplanung sorgt er dafür, dass jeder Anlass zu einem unvergleichlichen Erlebnis wird.",
+  "contact_image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80",
+  "contact_bullets": [
+    "Individuelle Eventplanung",
+    "Exklusive Catering-Pakete",
+    "Unterstützung vor Ort"
+  ],
+  "booking_title": "Ihren Anlass buchen",
+  "booking_text": "Das Haus am See steht für private und geschäftliche Veranstaltungen zur Verfügung. Wir bieten verschiedene Pakete – vom intimen Abendessen für 20 Personen bis zur festlichen Gala für über 200 Gäste.\n\nKontaktieren Sie uns für ein unverbindliches Beratungsgespräch."
+}

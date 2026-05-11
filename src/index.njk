@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Cuisine Nature
+activePage: home
+---
+
+<section class="hero">
+  <div class="hero-title-wrapper">
+    <h1 class="hero-title">Cuisine Nature</h1>
+  </div>
+  <p class="hero-text">{{ home.hero_text }}</p>
+</section>
+
+<img class="full-image" src="{{ home.hero_image }}" alt="Frisches Gemüse aus der Natur" />
+
+<section style="text-align:center; padding: 72px 80px;">
+  <div class="section-center">
+    <h2 class="section-title">Cuisine nature</h2>
+    <p class="section-text">{{ home.about_text }}</p>
+    <div class="tags">
+      <a href="/" class="tag">Küche</a>
+      <a href="/produzentinnen/" class="tag">Produzent:innen</a>
+      <a href="/haus-am-see/" class="tag">Haus am See</a>
+      <a href="/produkte/" class="tag">Produkte</a>
+    </div>
+  </div>
+</section>
+
+<div class="two-col">
+  <div class="two-col-content">
+    <h2 class="section-title">Haus am See</h2>
+    <p class="section-text">{{ home.haus_am_see_text }}</p>
+    <div class="btn-group">
+      <a href="/haus-am-see/" class="btn">Küche</a>
+      <a href="/haus-am-see/" class="btn">Sommer</a>
+    </div>
+  </div>
+  <div class="two-col-image">
+    <img src="{{ home.haus_am_see_image }}" alt="Haus am See bei Nacht" />
+  </div>
+</div>
+
+<div class="events-section bg-green">
+  <div class="events-image">
+    <img src="{{ home.events_image }}" alt="BBQ Event" />
+  </div>
+  <div class="events-content">
+    <h2 class="upcoming-title">{{ home.events_title }}</h2>
+    <p class="section-text">{{ home.events_text }}</p>
+    <div class="btn-group" style="margin-top: 32px;">
+      <a href="#anfrage" class="btn btn-dark">Anfrage senden</a>
+      <a href="#events" class="btn">Alle Events</a>
+    </div>
+  </div>
+</div>
+
+<section class="bg-green-light" style="text-align:center; padding: 56px 80px;">
+  <div class="section-center">
+    <p class="section-text">{{ home.produkte_intro }}</p>
+  </div>
+</section>
+
+<img class="full-image" src="{{ home.produkte_full_image }}" alt="Frisches buntes Gemüse" />
+
+<section style="text-align:center; padding: 64px 80px;">
+  <div class="section-center">
+    <h2 class="section-title">Produkte</h2>
+    <p class="section-text">{{ home.produkte_text }}</p>
+    <div class="btn-group" style="justify-content: center;">
+      <a href="/produkte/" class="btn">Gemüse</a>
+      <a href="/produkte/" class="btn">Früchte</a>
+    </div>
+  </div>
+</section>

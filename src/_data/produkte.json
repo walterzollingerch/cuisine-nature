@@ -1,0 +1,44 @@
+{
+  "hero_image": "https://images.unsplash.com/photo-1563565374-f43d5bbc8ede?w=1600&q=80",
+  "intro_text": "Frisch, regional, saisonal – unsere Produkte kommen direkt von den Feldern und Gärten unserer Produzent:innen. Entdecken Sie die Vielfalt der Natur und genießen Sie Qualität, die man schmeckt.",
+  "items": [
+    {
+      "tag": "Gemüse · Saison",
+      "title": "Saisongemüse",
+      "text": "Von Rüebli bis Zucchetti, von Mangold bis Kohlrabi – unser Saisongemüse wechselt mit dem Rhythmus der Natur. Frisch geerntet, direkt zu Ihnen.",
+      "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=900&q=80",
+      "category": "gemuese",
+      "reversed": false,
+      "background": ""
+    },
+    {
+      "tag": "Produzentin",
+      "title": "Direkt von Frau Muster",
+      "text": "Frau Muster baut auf ihrem Hof eine beeindruckende Vielfalt an Gemüse und Kräutern an. Mit traditionellen Methoden und modernem Bewusstsein für Nachhaltigkeit entstehen Produkte von höchster Qualität.",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80",
+      "category": "gemuese",
+      "reversed": true,
+      "background": "bg-green-light"
+    },
+    {
+      "tag": "Eier · Freilandhaltung",
+      "title": "Freilandeier",
+      "text": "Unsere Hühner leben auf weitläufigen Weiden und legen Eier von besonderer Qualität. Freilandhaltung nach Bio-Standards – für Hühner und Menschen gleichermassen.",
+      "image": "https://images.unsplash.com/photo-1569288052389-dac9b0ac9eac?w=900&q=80",
+      "category": "eier",
+      "reversed": false,
+      "background": ""
+    },
+    {
+      "tag": "Gemüse · Regional",
+      "title": "Regionale Peperoni",
+      "text": "Süss, aromatisch und von leuchtender Farbe – unsere Peperoni werden mit viel Sorgfalt angebaut. Regional und saisonal, genau dann, wenn sie am besten schmecken.",
+      "image": "https://images.unsplash.com/photo-1527736947477-2790e28f3443?w=900&q=80",
+      "category": "gemuese",
+      "reversed": true,
+      "background": "bg-green"
+    }
+  ],
+  "more_title": "Weitere Produkte",
+  "more_text": "Unser Sortiment erweitert sich laufend mit den Jahreszeiten. Möchten Sie ein bestimmtes Produkt anfragen oder einen regelmässigen Lieferservice einrichten?"
+}

@@ -1,0 +1,67 @@
+---
+layout: base.njk
+title: Produkte – Cuisine Nature
+activePage: produkte
+---
+
+<div class="page-hero">
+  <img src="{{ produkte.hero_image }}" alt="Buntes Gemüse" />
+</div>
+
+<section style="text-align:center; padding: 72px 80px;">
+  <div class="section-center">
+    <h1 class="section-title">Produkte</h1>
+    <p class="section-text">{{ produkte.intro_text }}</p>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterProducts('alle', this)">Alle</button>
+  <button class="filter-btn" onclick="filterProducts('gemuese', this)">Gemüse</button>
+  <button class="filter-btn" onclick="filterProducts('fruechte', this)">Früchte</button>
+  <button class="filter-btn" onclick="filterProducts('kraeuter', this)">Kräuter</button>
+  <button class="filter-btn" onclick="filterProducts('eier', this)">Eier &amp; Milch</button>
+</div>
+
+{% for item in produkte.items %}
+<div class="produkt-section {{ 'reverse' if item.reversed else '' }} {{ item.background }}" data-category="{{ item.category }}">
+  <div class="produkt-img">
+    <img src="{{ item.image }}" alt="{{ item.title }}" />
+  </div>
+  <div class="produkt-text">
+    <span class="produkt-tag">{{ item.tag }}</span>
+    <h2 class="section-title">{{ item.title }}</h2>
+    <p class="section-text">{{ item.text }}</p>
+    <div class="btn-group">
+      {% if item.background == 'bg-green' %}
+      <a href="#anfrage" class="btn btn-white">Bestellen</a>
+      {% elif item.tag == 'Produzentin' %}
+      <a href="/produzentinnen/" class="btn">Zur Produzentin</a>
+      {% else %}
+      <a href="#anfrage" class="btn">Bestellen</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
+  <div class="section-center">
+    <h2 class="section-title">{{ produkte.more_title }}</h2>
+    <p class="section-text">{{ produkte.more_text }}</p>
+    <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+      <a href="#anfrage" class="btn btn-dark">Anfrage senden</a>
+      <a href="/produzentinnen/" class="btn">Unsere Produzent:innen</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function filterProducts(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('[data-category]').forEach(section => {
+      section.style.display = (category === 'alle' || section.dataset.category === category) ? '' : 'none';
+    });
+  }
+</script>

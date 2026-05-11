@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Produzent:innen – Cuisine Nature
+activePage: produzentinnen
+---
+
+<div class="page-hero">
+  <img src="{{ produzentinnen.hero_image }}" alt="Frisches Gemüse" />
+</div>
+
+<section style="text-align:center; padding: 72px 80px;">
+  <div class="section-center">
+    <h1 class="section-title">Produzent:innen</h1>
+    <p class="section-text">{{ produzentinnen.intro_text }}</p>
+  </div>
+</section>
+
+{% for producer in produzentinnen.items %}
+  {% if not producer.reversed %}
+  <div class="person-card {{ producer.background }}">
+    <div class="card-text">
+      <h2 class="person-name">{{ producer.name }}</h2>
+      <p class="person-text">{{ producer.text | nl2br | safe }}</p>
+      <div class="btn-group">
+        <a href="/produkte/" class="btn">Zum Angebot</a>
+      </div>
+    </div>
+    <div class="card-image">
+      <img src="{{ producer.image }}" alt="{{ producer.name }}" />
+    </div>
+  </div>
+  {% else %}
+  <div class="person-card {{ producer.background }}">
+    <div class="card-image">
+      <img src="{{ producer.image }}" alt="{{ producer.name }}" />
+    </div>
+    <div class="card-text">
+      <h2 class="person-name">{{ producer.name }}</h2>
+      <p class="person-text">{{ producer.text | nl2br | safe }}</p>
+      <div class="btn-group">
+        <a href="/produkte/" class="btn {{ 'btn-white' if producer.background == 'bg-blue' else '' }}">Zum Angebot</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+
+<section style="padding: 0;">
+  <img class="full-image" src="{{ produzentinnen.highlight_image }}" alt="Bunte Ernte" style="height: 380px;" />
+  <div style="text-align:center; padding: 56px 80px;">
+    <div class="section-center">
+      <h2 class="section-title">{{ produzentinnen.highlight_title }}</h2>
+      <p class="section-text">{{ produzentinnen.highlight_text }}</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="/produkte/" class="btn">Alle Produkte entdecken</a>
+      </div>
+    </div>
+  </div>
+</section>

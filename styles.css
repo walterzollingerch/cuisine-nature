@@ -1,4 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap');
+@font-face {
+  font-family: 'GT Alpina';
+  src: url('/fonts/GT-Alpina-Standard-Regular.woff2') format('woff2'),
+       url('/fonts/GT-Alpina-Standard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Alpina';
+  src: url('/fonts/GT-Alpina-Standard-Regular-Italic.woff2') format('woff2'),
+       url('/fonts/GT-Alpina-Standard-Regular-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Alpina Typewriter';
+  src: url('/fonts/GT-Alpina-Typewriter-Regular.woff2') format('woff2'),
+       url('/fonts/GT-Alpina-Typewriter-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --green: #A2CB71;
@@ -23,7 +48,7 @@ html {
 }
 
 body {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'GT Alpina', Georgia, serif;
   color: var(--text);
   line-height: 1.7;
   background: var(--white);
@@ -90,7 +115,7 @@ nav {
   border: none;
   padding: 10px 26px;
   border-radius: 50px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'GT Alpina', serif;
   font-size: 12px;
   letter-spacing: 0.12em;
   cursor: pointer;
@@ -242,7 +267,7 @@ section {
   display: inline-block;
   padding: 10px 30px;
   border-radius: 50px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'GT Alpina', serif;
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -417,7 +442,7 @@ footer {
   border: 1.5px solid #999;
   padding: 10px 20px;
   border-radius: 50px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'GT Alpina', serif;
   font-size: 14px;
   outline: none;
   flex: 1;
@@ -592,7 +617,7 @@ footer {
   padding: 8px 22px;
   border-radius: 50px;
   border: 1.5px solid #999;
-  font-family: 'Playfair Display', serif;
+  font-family: 'GT Alpina', serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;

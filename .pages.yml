@@ -1,0 +1,103 @@
+media:
+  input: uploads
+  output: uploads
+
+content:
+  - name: homepage
+    label: Homepage
+    type: file
+    path: src/_data/home.json
+    fields:
+      - { name: hero_text, label: Hero Text, type: text }
+      - { name: hero_image, label: Hero Bild, type: image }
+      - { name: about_text, label: Über uns Text, type: text }
+      - { name: haus_am_see_text, label: Haus am See Text, type: text }
+      - { name: haus_am_see_image, label: Haus am See Bild, type: image }
+      - { name: events_title, label: Events Titel, type: string }
+      - { name: events_text, label: Events Text, type: text }
+      - { name: events_image, label: Events Bild, type: image }
+      - { name: produkte_intro, label: Produkte Intro, type: text }
+      - { name: produkte_full_image, label: Produkte Vollbild, type: image }
+      - { name: produkte_text, label: Produkte Text, type: text }
+
+  - name: produzentinnen
+    label: Produzent:innen
+    type: file
+    path: src/_data/produzentinnen.json
+    fields:
+      - { name: hero_image, label: Hero Bild, type: image }
+      - { name: intro_text, label: Intro Text, type: text }
+      - { name: highlight_image, label: Highlight Bild, type: image }
+      - { name: highlight_title, label: Highlight Titel, type: string }
+      - { name: highlight_text, label: Highlight Text, type: text }
+      - name: items
+        label: Produzent:innen
+        type: object-array
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: text, label: Beschreibung, type: text }
+          - { name: image, label: Foto, type: image }
+          - name: background
+            label: Hintergrundfarbe
+            type: select
+            options:
+              - { value: bg-green, label: Grün }
+              - { value: bg-blue, label: Blau }
+              - { value: bg-green-light, label: Hellgrün }
+          - { name: reversed, label: Bild links, type: boolean }
+
+  - name: haus_am_see
+    label: Haus am See
+    type: file
+    path: src/_data/haus_am_see.json
+    fields:
+      - { name: hero_image, label: Hero Bild, type: image }
+      - { name: intro_text, label: Intro Text, type: text }
+      - name: slider_images
+        label: Slider Bilder
+        type: object-array
+        fields:
+          - { name: url, label: Bild, type: image }
+          - { name: alt, label: Bildbeschreibung, type: string }
+      - { name: contact_name, label: Kontaktperson Name, type: string }
+      - { name: contact_text, label: Kontaktperson Text, type: text }
+      - { name: contact_image, label: Kontaktperson Foto, type: image }
+      - name: contact_bullets
+        label: Leistungen
+        type: string-array
+      - { name: booking_title, label: Buchung Titel, type: string }
+      - { name: booking_text, label: Buchung Text, type: text }
+
+  - name: produkte
+    label: Produkte
+    type: file
+    path: src/_data/produkte.json
+    fields:
+      - { name: hero_image, label: Hero Bild, type: image }
+      - { name: intro_text, label: Intro Text, type: text }
+      - name: items
+        label: Produkte
+        type: object-array
+        fields:
+          - { name: tag, label: Kategorie-Label, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: text, label: Beschreibung, type: text }
+          - { name: image, label: Bild, type: image }
+          - name: category
+            label: Kategorie (Filter)
+            type: select
+            options:
+              - { value: gemuese, label: Gemüse }
+              - { value: fruechte, label: Früchte }
+              - { value: kraeuter, label: Kräuter }
+              - { value: eier, label: Eier & Milch }
+          - { name: reversed, label: Bild links, type: boolean }
+          - name: background
+            label: Hintergrundfarbe
+            type: select
+            options:
+              - { value: "", label: Keiner }
+              - { value: bg-green, label: Grün }
+              - { value: bg-green-light, label: Hellgrün }
+      - { name: more_title, label: Weitere Produkte Titel, type: string }
+      - { name: more_text, label: Weitere Produkte Text, type: text }

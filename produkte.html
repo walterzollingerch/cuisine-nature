@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produkte – Cuisine Nature</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 28px 80px;
+      background: var(--bg-light);
+      border-bottom: 1px solid #d8d6d0;
+    }
+
+    .filter-btn {
+      padding: 8px 22px;
+      border-radius: 50px;
+      border: 1.5px solid #999;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--text);
+      color: white;
+      border-color: var(--text);
+    }
+
+    .produkt-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .produkt-section .produkt-img {
+      overflow: hidden;
+    }
+
+    .produkt-section .produkt-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 380px;
+    }
+
+    .produkt-section .produkt-text {
+      padding: 60px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .produkt-section.reverse {
+      direction: rtl;
+    }
+    .produkt-section.reverse > * {
+      direction: ltr;
+    }
+
+    .produkt-tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .filter-bar {
+        padding: 20px 24px;
+      }
+      .produkt-section,
+      .produkt-section.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .produkt-section .produkt-text {
+        padding: 40px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="nav-logo">C</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produzentinnen.html">Produzent:innen</a></li>
+      <li><a href="haus-am-see.html">Haus am See</a></li>
+      <li><a href="produkte.html" class="active">Produkte</a></li>
+    </ul>
+    <a href="#anfrage" class="nav-btn">Anfrage</a>
+  </nav>
+
+  <!-- HERO IMAGE -->
+  <div class="page-hero">
+    <img
+      src="https://images.unsplash.com/photo-1563565374-f43d5bbc8ede?w=1600&q=80"
+      alt="Buntes Gemüse"
+    />
+  </div>
+
+  <!-- INTRO -->
+  <section style="text-align:center; padding: 72px 80px;">
+    <div class="section-center">
+      <h1 class="section-title">Produkte</h1>
+      <p class="section-text">
+        Frisch, regional, saisonal – unsere Produkte kommen direkt von den Feldern und Gärten unserer Produzent:innen. Entdecken Sie die Vielfalt der Natur und genießen Sie Qualität, die man schmeckt.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('alle', this)">Alle</button>
+    <button class="filter-btn" onclick="filterProducts('gemuese', this)">Gemüse</button>
+    <button class="filter-btn" onclick="filterProducts('frueChte', this)">Früchte</button>
+    <button class="filter-btn" onclick="filterProducts('kraeuter', this)">Kräuter</button>
+    <button class="filter-btn" onclick="filterProducts('eier', this)">Eier &amp; Milch</button>
+  </div>
+
+  <!-- PRODUKT 1 -->
+  <div class="produkt-section" data-category="gemuese">
+    <div class="produkt-img">
+      <img
+        src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=900&q=80"
+        alt="Saisongemüse"
+      />
+    </div>
+    <div class="produkt-text">
+      <span class="produkt-tag">Gemüse · Saison</span>
+      <h2 class="section-title">Saisongemüse</h2>
+      <p class="section-text">
+        Von Rüebli bis Zucchetti, von Mangold bis Kohlrabi – unser Saisongemüse wechselt mit dem Rhythmus der Natur. Frisch geerntet, direkt zu Ihnen.
+      </p>
+      <div class="btn-group">
+        <a href="#anfrage" class="btn">Bestellen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUKT 2 (reversed) -->
+  <div class="produkt-section reverse bg-green-light" data-category="gemuese">
+    <div class="produkt-img">
+      <img
+        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80"
+        alt="Produzentin mit Erde"
+      />
+    </div>
+    <div class="produkt-text">
+      <span class="produkt-tag">Produzentin</span>
+      <h2 class="section-title">Direkt von Frau Muster</h2>
+      <p class="section-text">
+        Frau Muster baut auf ihrem Hof eine beeindruckende Vielfalt an Gemüse und Kräutern an. Mit traditionellen Methoden und modernem Bewusstsein für Nachhaltigkeit entstehen Produkte von höchster Qualität.
+      </p>
+      <div class="btn-group">
+        <a href="produzentinnen.html" class="btn">Zur Produzentin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUKT 3 -->
+  <div class="produkt-section" data-category="eier">
+    <div class="produkt-img">
+      <img
+        src="https://images.unsplash.com/photo-1569288052389-dac9b0ac9eac?w=900&q=80"
+        alt="Frische Eier"
+      />
+    </div>
+    <div class="produkt-text">
+      <span class="produkt-tag">Eier · Freilandhaltung</span>
+      <h2 class="section-title">Freilandeier</h2>
+      <p class="section-text">
+        Unsere Hühner leben auf weitläufigen Weiden und legen Eier von besonderer Qualität. Freilandhaltung nach Bio-Standards – für Hühner und Menschen gleichermassen.
+      </p>
+      <div class="btn-group">
+        <a href="#anfrage" class="btn">Bestellen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUKT 4 (reversed, green) -->
+  <div class="produkt-section reverse bg-green" data-category="gemuese">
+    <div class="produkt-img">
+      <img
+        src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?w=900&q=80"
+        alt="Grüne Paprika"
+      />
+    </div>
+    <div class="produkt-text">
+      <span class="produkt-tag">Gemüse · Regional</span>
+      <h2 class="section-title">Regionale Peperoni</h2>
+      <p class="section-text">
+        Süss, aromatisch und von leuchtender Farbe – unsere Peperoni werden mit viel Sorgfalt angebaut. Regional und saisonal, genau dann, wenn sie am besten schmecken.
+      </p>
+      <div class="btn-group">
+        <a href="#anfrage" class="btn btn-white">Bestellen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEITERE PRODUKTE -->
+  <section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
+    <div class="section-center">
+      <h2 class="section-title">Weitere Produkte</h2>
+      <p class="section-text">
+        Unser Sortiment erweitert sich laufend mit den Jahreszeiten. Möchten Sie ein bestimmtes Produkt anfragen oder einen regelmässigen Lieferservice einrichten?
+      </p>
+      <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+        <a href="#anfrage" class="btn btn-dark">Anfrage senden</a>
+        <a href="produzentinnen.html" class="btn">Unsere Produzent:innen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="anfrage">
+    <div class="footer-top">
+      <div>
+        <p class="footer-newsletter-label">Anmelden für Neuigkeiten</p>
+        <form class="footer-form" onsubmit="return false;">
+          <input type="email" class="footer-input" placeholder="Ihre E-Mail-Adresse" />
+          <button type="submit" class="nav-btn">Anmelden</button>
+        </form>
+        <div class="footer-address">
+          <strong>Cuisine Nature</strong><br />
+          Musterstrasse 132<br />
+          4058 Zürich<br /><br />
+          <a href="#" style="text-decoration: underline; font-style: italic;">Rechtliches erfahren</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="#" title="Facebook" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" title="Instagram" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="mailto:info@cuisinature.ch" title="E-Mail" aria-label="E-Mail">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-brand-wrapper">
+        <div class="footer-brand">Cuisine Nature</div>
+      </div>
+      <p class="footer-copy">© 2024 Cuisine Nature</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterProducts(category, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show/hide sections
+      document.querySelectorAll('[data-category]').forEach(section => {
+        if (category === 'alle' || section.dataset.category === category) {
+          section.style.display = '';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

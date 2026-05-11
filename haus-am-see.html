@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haus am See – Cuisine Nature</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .slider {
+      position: relative;
+      overflow: hidden;
+      height: 420px;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+    }
+    .slider-track img {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+    .slider-btn:hover { background: white; }
+    .slider-btn.prev { left: 16px; }
+    .slider-btn.next { right: 16px; }
+    .slider-dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.6);
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+    .slider-dot.active { background: white; }
+
+    .bullets {
+      list-style: none;
+      margin-top: 16px;
+    }
+    .bullets li {
+      font-style: italic;
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="nav-logo">C</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produzentinnen.html">Produzent:innen</a></li>
+      <li><a href="haus-am-see.html" class="active">Haus am See</a></li>
+      <li><a href="produkte.html">Produkte</a></li>
+    </ul>
+    <a href="#anfrage" class="nav-btn">Anfrage</a>
+  </nav>
+
+  <!-- HERO IMAGE -->
+  <div class="page-hero">
+    <img
+      src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80"
+      alt="Haus am See bei Nacht"
+    />
+  </div>
+
+  <!-- INTRO -->
+  <section style="text-align:center; padding: 72px 80px;">
+    <div class="section-center">
+      <h1 class="section-title">Haus am See</h1>
+      <p class="section-text">
+        Unser Haus am See ist ein Ort voller Atmosphäre und Eleganz. Eingebettet in eine traumhafte Seelandschaft bieten wir den perfekten Rahmen für private Feiern, exklusive Firmenevents und stimmungsvolle Dinner unter freiem Himmel.<br /><br />
+        Das historische Gebäude mit seinem charmanten Innenhof und der direkten Seelage schafft eine unvergessliche Kulisse – zu jeder Jahreszeit, bei jedem Anlass.
+      </p>
+    </div>
+  </section>
+
+  <!-- IMAGE SLIDER -->
+  <div class="slider" id="slider">
+    <div class="slider-track" id="sliderTrack">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80" alt="Event Venue" />
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80" alt="Abendstimmung am See" />
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80" alt="Festliches Dinner" />
+    </div>
+    <button class="slider-btn prev" onclick="slide(-1)">&#8249;</button>
+    <button class="slider-btn next" onclick="slide(1)">&#8250;</button>
+    <div class="slider-dots">
+      <button class="slider-dot active" onclick="goTo(0)"></button>
+      <button class="slider-dot" onclick="goTo(1)"></button>
+      <button class="slider-dot" onclick="goTo(2)"></button>
+    </div>
+  </div>
+
+  <!-- CONTACT PERSON SECTION -->
+  <div class="two-col bg-green-light">
+    <div class="two-col-content">
+      <h2 class="section-title">Herr Muster</h2>
+      <p class="section-text">
+        Als Eventkoordinator steht Herr Muster Ihnen von der ersten Idee bis zum letzten Tanzschritt zur Seite. Mit langjähriger Erfahrung in der Eventplanung sorgt er dafür, dass jeder Anlass zu einem unvergleichlichen Erlebnis wird.
+      </p>
+      <ul class="bullets">
+        <li>Individuelle Eventplanung</li>
+        <li>Exklusive Catering-Pakete</li>
+        <li>Unterstützung vor Ort</li>
+      </ul>
+      <div class="btn-group">
+        <a href="#anfrage" class="btn">Kontakt aufnehmen</a>
+      </div>
+    </div>
+    <div class="two-col-image">
+      <img
+        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80"
+        alt="Eventkoordinator"
+      />
+    </div>
+  </div>
+
+  <!-- BUCHUNG SECTION -->
+  <section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
+    <div class="section-center">
+      <h2 class="section-title">Ihren Anlass buchen</h2>
+      <p class="section-text">
+        Das Haus am See steht für private und geschäftliche Veranstaltungen zur Verfügung. Wir bieten verschiedene Pakete – vom intimen Abendessen für 20 Personen bis zur festlichen Gala für über 200 Gäste.<br /><br />
+        Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
+      </p>
+      <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+        <a href="#anfrage" class="btn btn-dark">Anfrage senden</a>
+        <a href="produkte.html" class="btn">Kulinarik entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="anfrage">
+    <div class="footer-top">
+      <div>
+        <p class="footer-newsletter-label">Anmelden für Neuigkeiten</p>
+        <form class="footer-form" onsubmit="return false;">
+          <input type="email" class="footer-input" placeholder="Ihre E-Mail-Adresse" />
+          <button type="submit" class="nav-btn">Anmelden</button>
+        </form>
+        <div class="footer-address">
+          <strong>Cuisine Nature</strong><br />
+          Musterstrasse 132<br />
+          4058 Zürich<br /><br />
+          <a href="#" style="text-decoration: underline; font-style: italic;">Rechtliches erfahren</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="#" title="Facebook" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" title="Instagram" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="mailto:info@cuisinature.ch" title="E-Mail" aria-label="E-Mail">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-brand-wrapper">
+        <div class="footer-brand">Cuisine Nature</div>
+      </div>
+      <p class="footer-copy">© 2024 Cuisine Nature</p>
+    </div>
+  </footer>
+
+  <script>
+    let current = 0;
+    const total = 3;
+
+    function updateSlider() {
+      document.getElementById('sliderTrack').style.transform = `translateX(-${current * 100}%)`;
+      document.querySelectorAll('.slider-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function slide(dir) {
+      current = (current + dir + total) % total;
+      updateSlider();
+    }
+
+    function goTo(i) {
+      current = i;
+      updateSlider();
+    }
+
+    // Auto-slide
+    setInterval(() => slide(1), 5000);
+  </script>
+
+</body>
+</html>

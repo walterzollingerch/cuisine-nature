@@ -31,42 +31,48 @@
   {{ content | safe }}
 
   <footer id="anfrage">
-    <div class="footer-top">
-      <div>
+
+    <div class="footer-newsletter-row">
+      <div class="footer-newsletter-left">
         <p class="footer-newsletter-label">Anmelden für Neuigkeiten</p>
         <form class="footer-form" onsubmit="window.open('http://eepurl.com/0ffZ4WLj6E','_blank'); return false;">
-          <input type="email" class="footer-input" placeholder="Ihre E-Mail-Adresse" />
-          <button type="submit" class="nav-btn">Anmelden</button>
+          <input type="email" class="footer-input" placeholder="E-MAIL" />
+          <input type="text" class="footer-input" placeholder="VORNAME" />
+          <input type="text" class="footer-input" placeholder="NACHNAME" />
+          <button type="submit" class="footer-submit">ANMELDEN</button>
         </form>
-        <div class="footer-address">
-          <strong>Cuisine nature AG</strong><br />
-          Seestrasse 513<br />
-          8038 Zürich<br /><br />
-          <a href="tel:+41442696236">+41 44 269 62 36</a><br />
-          <a href="mailto:events@cuisinenature.ch">events@cuisinenature.ch</a>
-        </div>
       </div>
-      <div class="footer-right">
-        <div class="social-icons">
-          <a href="https://www.instagram.com/cuisinenature/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="mailto:events@cuisinenature.ch" title="E-Mail" aria-label="E-Mail">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-        <div class="footer-links">
-          <a href="/datenschutz/">AGB's &amp; Datenschutz</a>
-          <a href="#">Impressum</a>
-        </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon-filled">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/cuisinenature/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon-filled">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/18824498/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon-filled">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
       </div>
     </div>
+
+    <div class="footer-info-row">
+      <div class="footer-address">
+        Cuisine nature<br />
+        Seestrasse 513<br />
+        8038 Zürich<br /><br />
+        <a href="mailto:events@cuisinenature.ch" class="footer-link-underline">Nachricht schreiben</a>
+      </div>
+      <div class="footer-meta">
+        <a href="/datenschutz/" class="footer-link-underline">Datenschutz</a>
+        <a href="#" class="footer-link-underline">Impressum</a>
+        <span>© 2026 Cuisine nature</span>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      <div class="footer-brand-wrapper">
-        <img src="/uploads/CN_Wortmarke_1Z_Schwarz.svg" alt="Cuisine Nature" class="footer-wordmark" />
-      </div>
-      <p class="footer-copy">© 2025 Cuisine nature AG</p>
+      <img src="/uploads/CN_Wortmarke_1Z_Schwarz.svg" alt="Cuisine Nature" class="footer-wordmark" />
     </div>
+
   </footer>
 
   <script>

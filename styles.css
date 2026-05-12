@@ -35,6 +35,10 @@
   --text: #1A1A1A;
   --white: #FFFFFF;
   --bg-light: #f4f3ef;
+  --salbei: #A2CB71;
+  --hellblau: #00AAE3;
+  --tiefblau: #0756C2;
+  --aubergine: #5E1A3B;
 }
 
 * {
@@ -315,16 +319,27 @@ section {
 }
 
 /* ===== BACKGROUND VARIANTS ===== */
-.bg-green {
-  background: var(--green);
+.bg-green,
+.bg-salbei {
+  background: var(--salbei);
 }
 
 .bg-green-light {
   background: var(--green-section);
 }
 
-.bg-blue {
-  background: var(--blue);
+.bg-blue,
+.bg-hellblau {
+  background: var(--hellblau);
+}
+
+.bg-tiefblau {
+  background: var(--tiefblau);
+}
+
+.bg-aubergine {
+  background: var(--aubergine);
+  color: var(--white);
 }
 
 .bg-light {

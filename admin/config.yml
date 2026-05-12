@@ -23,7 +23,6 @@ collections:
           - { label: "Events Titel", name: "events_title", widget: "string" }
           - { label: "Events Text", name: "events_text", widget: "text" }
           - { label: "Events Bild", name: "events_image", widget: "image" }
-          - { label: "Produkte Intro", name: "produkte_intro", widget: "text" }
           - { label: "Produkte Vollbild", name: "produkte_full_image", widget: "image" }
           - { label: "Produkte Text", name: "produkte_text", widget: "text" }
 
@@ -36,9 +35,6 @@ collections:
         fields:
           - { label: "Hero Bild", name: "hero_image", widget: "image" }
           - { label: "Intro Text", name: "intro_text", widget: "text" }
-          - { label: "Highlight Bild", name: "highlight_image", widget: "image" }
-          - { label: "Highlight Titel", name: "highlight_title", widget: "string" }
-          - { label: "Highlight Text", name: "highlight_text", widget: "text" }
           - label: "Produzent:innen"
             name: "items"
             widget: "list"
@@ -50,8 +46,11 @@ collections:
                 name: "background"
                 widget: "select"
                 options:
-                  - { label: "Grün", value: "bg-green" }
-                  - { label: "Blau", value: "bg-blue" }
+                  - { label: "Keiner", value: "" }
+                  - { label: "Salbei", value: "bg-salbei" }
+                  - { label: "Hellblau", value: "bg-hellblau" }
+                  - { label: "Tiefblau", value: "bg-tiefblau" }
+                  - { label: "Aubergine", value: "bg-aubergine" }
                   - { label: "Hellgrün", value: "bg-green-light" }
               - { label: "Bild links (umgekehrt)", name: "reversed", widget: "boolean", default: false }
 
@@ -111,7 +110,10 @@ collections:
                 widget: "select"
                 options:
                   - { label: "Keiner", value: "" }
-                  - { label: "Grün", value: "bg-green" }
+                  - { label: "Salbei", value: "bg-salbei" }
+                  - { label: "Hellblau", value: "bg-hellblau" }
+                  - { label: "Tiefblau", value: "bg-tiefblau" }
+                  - { label: "Aubergine", value: "bg-aubergine" }
                   - { label: "Hellgrün", value: "bg-green-light" }
           - { label: "Weitere Produkte Titel", name: "more_title", widget: "string" }
           - { label: "Weitere Produkte Text", name: "more_text", widget: "text" }

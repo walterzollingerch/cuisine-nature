@@ -1,0 +1,15 @@
+{
+  "intro": "Wir sind ein eingespieltes Team. Wir realisieren seit fünf Jahren gemeinsam Events: Von elegant bis verspielt, über mehrere Stockwerke und unter freiem Himmel.",
+  "members": [
+    {
+      "name": "René",
+      "text": "René ist der kreative Kopf hinter allem. Immer auf der Suche nach ehrlichen Produkten mit Geschichte. Er kreiert Gerichte, intensiv und klar im Geschmack. René ist Koch, Fleischsommelier und Gemüsespezialist.",
+      "image": ""
+    },
+    {
+      "name": "Veronica",
+      "text": "Veronica ist Eventplanerin und stets offen für mutige Ideen. Sie denkt mit, fühlt voraus und behält den Überblick.",
+      "image": ""
+    }
+  ]
+}

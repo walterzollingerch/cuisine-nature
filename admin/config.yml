@@ -121,3 +121,19 @@ collections:
                   - { label: "Hellgrün", value: "bg-green-light" }
           - { label: "Weitere Produkte Titel", name: "more_title", widget: "string" }
           - { label: "Weitere Produkte Text", name: "more_text", widget: "text" }
+
+  - name: "team"
+    label: "Team"
+    files:
+      - label: "Team Seite"
+        name: "team"
+        file: "src/_data/team.json"
+        fields:
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Teammitglieder"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Beschreibung", name: "text", widget: "text" }
+              - { label: "Foto", name: "image", widget: "image", required: false }

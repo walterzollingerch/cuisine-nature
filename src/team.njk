@@ -1,12 +1,28 @@
 ---
 layout: base.njk
-title: Team – Cuisine Nature
+title: Team – Cuisine Nature AG
 activePage: team
 ---
 
-<section style="text-align:center; padding: 120px 80px 80px;">
+<section style="text-align:center; padding: 100px 80px 72px;">
   <div class="section-center">
-    <h2 class="section-title">Team</h2>
-    <p class="section-text">{{ team.text if team else "Lernen Sie unser Team kennen." }}</p>
+    <h1 class="section-title">Team</h1>
+    <p class="section-text">{{ team.intro }}</p>
   </div>
 </section>
+
+<div class="team-grid">
+  {% for member in team.members %}
+  <div class="team-card">
+    {% if member.image %}
+    <div class="team-card-image">
+      <img src="{{ member.image }}" alt="{{ member.name }}" />
+    </div>
+    {% endif %}
+    <div class="team-card-content">
+      <h2 class="person-name">{{ member.name }}</h2>
+      <p class="section-text">{{ member.text | nl2br | safe }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

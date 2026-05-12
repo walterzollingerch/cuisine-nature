@@ -1,30 +1,37 @@
 {
-  "hero_image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=1600&q=80",
-  "intro_text": "Hinter jedem Produkt steckt eine Geschichte. Unsere Produzent:innen sind leidenschaftliche Menschen, die mit Herzblut und Respekt für die Natur arbeiten. Lernen Sie sie kennen.",
+  "hero_image": "/uploads/Bildschirmfoto 2026-05-11 um 15.39.37.png",
+  "intro_text": "Sie brauchen keine Pestizide und schwere Geräte, sie sorgen für gesunde Böden und fördern die Biodiversität. Auch um ihre Tiere kümmern sie sich mit grösster Sorgfalt. Unsere Produzent:innen arbeiten regenerativ. Wir besuchen sie regelmässig und kennen sie und ihre Tiere beim Namen.",
   "highlight_image": "https://images.unsplash.com/photo-1563565374-f43d5bbc8ede?w=1600&q=80",
   "highlight_title": "Direkt von der Quelle",
   "highlight_text": "Alle Produkte, die Sie bei Cuisine nature AG finden, kommen direkt von unseren Produzent:innen – ohne Umwege, ohne Kompromisse. Frische, Qualität und Vertrauen stehen bei uns an erster Stelle.",
   "items": [
     {
-      "name": "Herr Muster",
-      "text": "Mit über zwanzig Jahren Erfahrung in der nachhaltigen Landwirtschaft hat Herr Muster einen Betrieb aufgebaut, der saisonale Qualität mit ökologischer Verantwortung verbindet. Seine Leidenschaft gilt dem Boden und allem, was daraus wächst.\n\nAuf seinem Hof in der Region Zürich erzeugt er Gemüse und Kräuter, die keine langen Transportwege kennen – frisch, regional, ehrlich.",
+      "name": "Z’Alpenblick",
+      "text": "Regina und ihr Team setzen auf die Kraft von Millionen Mikroorganismen und natürlichen Schädlingsbekämpfern: quakende Laufenten auf den Feldern und in Laubhaufen versteckte Igel. \nAuf dem Hof, am höchsten Punkt im Hirzel, wachsen die Kälber bei ihren Müttern auf grünen Weiden auf und dürfen auch dort sterben. Regina selbst nimmt die Hofschlachtung vor. Respektvoll und stressfrei.\nGefüttert werden die Tiere mit hofeigenem Gras und Heu. Ihr Mist wird als Kompost genutzt. Ein geschlossener Kreislauf.\n",
       "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=900&q=80",
       "background": "bg-green",
       "reversed": false
     },
     {
-      "name": "Herr Muster",
-      "text": "Als Quereinsteiger fand er in der Permakultur seine Berufung. Auf seiner Parzelle am Waldrand wächst eine beeindruckende Vielfalt – von alten Gemüsesorten bis hin zu exotischen Kräutern, die man sonst kaum findet.\n\nSein Wissen gibt er gerne weiter – bei Hoffesten, Workshops und natürlich bei unseren gemeinsamen Events.",
+      "name": "Slow Grow",
+      "text": "Sie haben die «Mosaik-Landwirtschaft» entwickelt und betreiben sie bis heute. Auf über 20 Hektaren in Gossau und Mönchaltorf sowie auf weiteren 40 Hektaren am Zürichberg baut Slow Grow Gemüse, Acker- und Spezialkulturen an. \nMit dem Projekt «HofLabor» erforscht das Team gemeinsam mit Hochschulen, Fachleuten und Partner:innen immer wieder neue Ansätze der regenerativen Landwirtschaft und macht sie auch für andere Betriebe zugänglich. Für dieses Engagement wurden sie mehrfach ausgezeichnet.\n",
       "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&q=80",
       "background": "bg-blue",
       "reversed": true
     },
     {
-      "name": "Frau Muster",
-      "text": "Frau Muster bewirtschaftet einen kleinen Familienbetrieb, der seit drei Generationen in Familienbesitz ist. Mit viel Sorgfalt und traditionellem Handwerk produziert sie saisonales Gemüse, Beeren und Hochstammobst.\n\nWas sie anpflanzt, wird geerntet, wenn es reif ist – nicht früher, nicht später.",
+      "name": "Terramay",
+      "text": "Wir sind Teil der Tom Talent Gruppe. Die Philosophie der Gruppe ist es, kreatives Schaffen durch nachhaltiges und konsequentes Unternehmertum zu fördern. Zu Tom Talent gehört auch Terramay, eine 560 Hektar grosse Farm im portugiesischen Dorf Rosário. Als vor sechs Jahren dort gestartet wurde, glich das Land einer Wüste. Ausser Gras, Büschen, einigen Olivenbäumen und vielen Korkeichen gab es kaum etwas.\nMit Methoden aus der regenerativen Landwirtschaft konnten wir den Boden wieder fruchtbar machen. Es entstand die Farm Terramay, die bis heute von  David und seinem Team betrieben wird. Sie teilen unsere Erfahrungen mit der Gemeinschaft vor Ort und wir hier in unserer Cuisine nature. \n",
       "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80",
       "background": "bg-green-light",
       "reversed": false
+    },
+    {
+      "reversed": false,
+      "name": "Paul Blume",
+      "text": "Paul von Blumen Wein ist bekannt für seine biodynamischen Weine aus kleinen, sorgfältig ausgewählten Weingütern. Seine Leidenschaft gilt ebenso alkoholfreien Alternativen, die denselben Anspruch verfolgen: Produkte, die verantwortungsvoll entstehen, inspirieren und lange nachwirken.",
+      "image": "/uploads/Bildschirmfoto 2026-05-11 um 15.31.00.png",
+      "background": "bg-green"
     }
   ]
 }

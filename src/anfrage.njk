@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: Anfrage – Cuisine Nature AG
+---
+<section style="padding: 120px 80px; max-width: 720px; margin: 0 auto;">
+  <h1 class="section-title" style="margin-bottom: 16px;">Anfrage</h1>
+  <p class="section-text" style="margin-bottom: 48px;">Wir freuen uns von Ihnen zu hören. Füllen Sie das Formular aus – wir melden uns in Kürze.</p>
+
+  <form id="contact-form">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div>
+          <label style="display:block; font-size:0.8rem; letter-spacing:0.08em; margin-bottom:6px;">NAME *</label>
+          <input type="text" id="c-name" required style="width:100%; padding:12px 20px; border:1px solid #1a1a1a; border-radius:50px; font-size:1rem; box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.8rem; letter-spacing:0.08em; margin-bottom:6px;">E-MAIL *</label>
+          <input type="email" id="c-email" required style="width:100%; padding:12px 20px; border:1px solid #1a1a1a; border-radius:50px; font-size:1rem; box-sizing:border-box;" />
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div>
+          <label style="display:block; font-size:0.8rem; letter-spacing:0.08em; margin-bottom:6px;">TELEFON</label>
+          <input type="tel" id="c-telefon" style="width:100%; padding:12px 20px; border:1px solid #1a1a1a; border-radius:50px; font-size:1rem; box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.8rem; letter-spacing:0.08em; margin-bottom:6px;">ANLASS</label>
+          <select id="c-anlass" style="width:100%; padding:12px 20px; border:1px solid #1a1a1a; border-radius:50px; font-size:1rem; background:#fff; box-sizing:border-box; appearance:none;">
+            <option value="">Bitte wählen</option>
+            <option>Event / Catering</option>
+            <option>Haus am See</option>
+            <option>Produkte</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label style="display:block; font-size:0.8rem; letter-spacing:0.08em; margin-bottom:6px;">NACHRICHT *</label>
+        <textarea id="c-nachricht" required rows="6" style="width:100%; padding:16px 20px; border:1px solid #1a1a1a; border-radius:20px; font-size:1rem; font-family:inherit; resize:vertical; box-sizing:border-box;"></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-dark" style="min-width:180px;">SENDEN</button>
+      </div>
+
+    </div>
+  </form>
+
+  <p id="contact-success" style="display:none; margin-top:24px; font-style:italic;">Vielen Dank! Wir melden uns in Kürze bei Ihnen.</p>
+  <p id="contact-error" style="display:none; margin-top:24px; color:#c00;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:events@cuisinenature.ch">events@cuisinenature.ch</a>.</p>
+</section>
+
+<script>
+  document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const body = {
+      name: document.getElementById('c-name').value,
+      email: document.getElementById('c-email').value,
+      telefon: document.getElementById('c-telefon').value,
+      anlass: document.getElementById('c-anlass').value,
+      nachricht: document.getElementById('c-nachricht').value,
+    };
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (res.ok) {
+        e.target.style.display = 'none';
+        document.getElementById('contact-success').style.display = 'block';
+      } else { throw new Error(); }
+    } catch {
+      document.getElementById('contact-error').style.display = 'block';
+    }
+  });
+</script>

@@ -19,7 +19,7 @@ export async function sendEmail(to, subject, html) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'Cuisine Nature AG <onboarding@resend.dev>',
+      from: 'Cuisine Nature AG <newsletter@tomtalent.ch>',
       to,
       subject,
       html,

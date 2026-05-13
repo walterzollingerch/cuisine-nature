@@ -34,15 +34,13 @@
     <div class="footer-newsletter-row">
       <div class="footer-newsletter-left">
         <p class="footer-newsletter-label">Anmelden für Neuigkeiten</p>
-        <form class="footer-form" name="newsletter" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form">
-          <input type="hidden" name="form-name" value="newsletter" />
-          <input type="hidden" name="bot-field" />
-          <input type="email" name="email" class="footer-input" placeholder="E-MAIL" required />
-          <input type="text" name="vorname" class="footer-input" placeholder="VORNAME" required />
-          <input type="text" name="nachname" class="footer-input" placeholder="NACHNAME" required />
+        <form class="footer-form" id="newsletter-form">
+          <input type="email" id="nl-email" class="footer-input" placeholder="E-MAIL" required />
+          <input type="text" id="nl-vorname" class="footer-input" placeholder="VORNAME" required />
+          <input type="text" id="nl-nachname" class="footer-input" placeholder="NACHNAME" />
           <button type="submit" class="footer-submit">ANMELDEN</button>
         </form>
-        <p id="newsletter-success" style="display:none; margin-top:12px; font-style:italic;">Danke! Sie erhalten in Kürze eine Bestätigungsmail.</p>
+        <p id="newsletter-success" style="display:none; margin-top:12px; font-style:italic;">Danke! Bitte bestätigen Sie Ihre Anmeldung per E-Mail.</p>
         <p id="newsletter-error" style="display:none; margin-top:12px; color:#c00;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>
       </div>
       <div class="footer-social">
@@ -81,12 +79,19 @@
   <script>
     document.getElementById('newsletter-form')?.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
+      const body = {
+        email: document.getElementById('nl-email').value,
+        vorname: document.getElementById('nl-vorname').value,
+        nachname: document.getElementById('nl-nachname').value,
+      };
       try {
-        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+        const res = await fetch('/api/newsletter/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
         if (res.ok) {
-          form.style.display = 'none';
+          e.target.style.display = 'none';
           document.getElementById('newsletter-success').style.display = 'block';
         } else { throw new Error(); }
       } catch {

@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: Newsletter Admin – Cuisine Nature AG
+---
+<section style="padding: 80px;">
+  <h1 class="section-title" style="margin-bottom:32px;">Newsletter Kontakte</h1>
+
+  <div id="login" style="max-width:400px;">
+    <input id="key-input" type="password" placeholder="Admin-Passwort" style="padding:10px 16px;border:1px solid #ccc;border-radius:50px;width:100%;margin-bottom:12px;font-size:1rem;" />
+    <button onclick="load()" class="btn btn-dark">Laden</button>
+  </div>
+
+  <div id="content" style="display:none;">
+    <div style="display:flex;gap:16px;align-items:center;margin-bottom:24px;">
+      <span id="count" style="font-style:italic;"></span>
+      <a id="csv-link" href="#" class="btn">Als CSV exportieren</a>
+    </div>
+    <table id="table" style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+      <thead>
+        <tr style="border-bottom:2px solid #1a1a1a;text-align:left;">
+          <th style="padding:10px 16px 10px 0;">Vorname</th>
+          <th style="padding:10px 16px;">Nachname</th>
+          <th style="padding:10px 16px;">E-Mail</th>
+          <th style="padding:10px 16px;">Datum</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <p id="error" style="display:none;color:#c00;">Falsches Passwort oder Fehler beim Laden.</p>
+</section>
+
+<script>
+  async function load() {
+    const key = document.getElementById('key-input').value;
+    const res = await fetch(`/api/newsletter/contacts?key=${encodeURIComponent(key)}`);
+    if (!res.ok) {
+      document.getElementById('error').style.display = 'block';
+      return;
+    }
+    const { contacts } = await res.json();
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    document.getElementById('count').textContent = `${contacts.length} aktive Kontakte`;
+    document.getElementById('csv-link').href = `/api/newsletter/contacts?key=${encodeURIComponent(key)}&format=csv`;
+
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = contacts.map(c => `
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:10px 16px 10px 0;">${c.vorname}</td>
+        <td style="padding:10px 16px;">${c.nachname}</td>
+        <td style="padding:10px 16px;">${c.email}</td>
+        <td style="padding:10px 16px;">${new Date(c.createdAt).toLocaleDateString('de-CH')}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.getElementById('key-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') load();
+  });
+</script>

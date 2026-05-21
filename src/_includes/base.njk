@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
 <body>
 
@@ -21,7 +22,6 @@
     <ul class="nav-links">
       <li><a href="/produzentinnen/" {% if activePage == 'produzentinnen' %}class="active"{% endif %}>Produzent:innen</a></li>
       <li><a href="/haus-am-see/" {% if activePage == 'haus-am-see' %}class="active"{% endif %}>Haus am See</a></li>
-      <li><a href="/produkte/" {% if activePage == 'produkte' %}class="active"{% endif %}>Produkte</a></li>
     </ul>
     <a href="/anfrage/" class="nav-btn">Anfrage</a>
   </nav>

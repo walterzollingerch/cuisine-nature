@@ -152,10 +152,10 @@ nav {
 
 .hero-text {
   font-style: italic;
-  font-size: 1.2rem;
-  max-width: 640px;
+  font-size: 2rem;
+  max-width: 800px;
   margin: 0 auto;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 
 /* ===== PAGE HERO (full image top) ===== */

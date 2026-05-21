@@ -199,7 +199,7 @@ section {
 }
 
 .section-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(4rem, 8vw, 8rem);
   font-style: italic;
   margin-bottom: 20px;
   line-height: 1.2;

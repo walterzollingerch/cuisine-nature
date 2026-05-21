@@ -1,0 +1,84 @@
+---
+layout: base.njk
+title: Winter – Cuisine Nature AG
+activePage: haus-am-see
+---
+
+<div class="page-hero">
+  <img src="{{ winter.hero_image }}" alt="Winter am See" />
+</div>
+
+<section style="text-align:center; padding: 72px 80px;">
+  <div class="section-center">
+    <h1 class="section-title">Winter – Oktober bis April</h1>
+    <p class="section-text">{{ winter.intro_text | nl2br | safe }}</p>
+  </div>
+</section>
+
+<div class="slider" id="slider">
+  <div class="slider-track" id="sliderTrack">
+    {% for slide in winter.slider_images %}
+    <img src="{{ slide.url }}" alt="{{ slide.alt }}" />
+    {% endfor %}
+  </div>
+  <button class="slider-btn prev" onclick="slide(-1)">&#8249;</button>
+  <button class="slider-btn next" onclick="slide(1)">&#8250;</button>
+  <div class="slider-dots">
+    {% for slide in winter.slider_images %}
+    <button class="slider-dot {{ 'active' if loop.first else '' }}" onclick="goTo({{ loop.index0 }})"></button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="two-col bg-green-light">
+  <div class="two-col-content">
+    <h2 class="section-title">{{ winter.contact_name }}</h2>
+    <p class="section-text">{{ winter.contact_text }}</p>
+    <ul class="bullets">
+      {% for bullet in winter.contact_bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    <div class="btn-group">
+      <a href="/anfrage/" class="btn">Kontakt aufnehmen</a>
+    </div>
+  </div>
+  <div class="two-col-image">
+    <img src="{{ winter.contact_image }}" alt="{{ winter.contact_name }}" />
+  </div>
+</div>
+
+<section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
+  <div class="section-center">
+    <h2 class="section-title">{{ winter.booking_title }}</h2>
+    <p class="section-text">{{ winter.booking_text | nl2br | safe }}</p>
+    <div class="btn-group" style="justify-content: center; margin-top: 32px;">
+      <a href="/anfrage/" class="btn btn-dark">Anfrage senden</a>
+      <a href="/sommer/" class="btn">Sommer ansehen</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  let current = 0;
+  const total = {{ winter.slider_images | length }};
+
+  function updateSlider() {
+    document.getElementById('sliderTrack').style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function slide(dir) {
+    current = (current + dir + total) % total;
+    updateSlider();
+  }
+
+  function goTo(i) {
+    current = i;
+    updateSlider();
+  }
+
+  setInterval(() => slide(1), 5000);
+</script>

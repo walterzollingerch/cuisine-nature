@@ -267,6 +267,7 @@ section {
 
 .two-col-image {
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .two-col-image img {
@@ -274,6 +275,7 @@ section {
   height: 100%;
   object-fit: cover;
   min-height: 360px;
+  border-radius: 20px;
 }
 
 /* ===== BUTTONS ===== */
@@ -410,7 +412,7 @@ section {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   margin-bottom: 32px;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .team-card-image img {
@@ -440,7 +442,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .events-content {
@@ -734,6 +736,7 @@ footer {
 
 .produkt-section .produkt-img {
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .produkt-section .produkt-img img {
@@ -741,6 +744,7 @@ footer {
   height: 100%;
   object-fit: cover;
   min-height: 380px;
+  border-radius: 20px;
 }
 
 .produkt-section .produkt-text {

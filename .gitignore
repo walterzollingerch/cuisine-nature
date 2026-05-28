@@ -4,3 +4,7 @@ node_modules/
 *.log
 .env
 _site/
+
+# Local Netlify folder
+.netlify
+.vercel

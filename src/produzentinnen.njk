@@ -10,26 +10,13 @@ activePage: produzentinnen
 
 <section style="text-align:center; padding: 72px 80px;">
   <div class="section-center">
-    <h1 class="section-title">Produzent:innen</h1>
-    <p class="section-text">{{ produzentinnen.intro_text }}</p>
+    <h1 class="section-title" style="font-weight:normal;">Produzent:innen</h1>
+    <p class="section-text-large" style="font-style:italic; font-size:1.2rem;">{{ produzentinnen.intro_text }}</p>
   </div>
 </section>
 
-{% for producer in produzentinnen.items %}
-  {% if not producer.reversed %}
-  <div class="person-card {{ producer.background }}">
-    <div class="card-text">
-      <h2 class="person-name">{{ producer.name }}</h2>
-      <p class="person-text">{{ producer.text | nl2br | safe }}</p>
-      <div class="btn-group">
-        <a href="/produkte/" class="btn">Zum Angebot</a>
-      </div>
-    </div>
-    <div class="card-image">
-      <img src="{{ producer.image }}" alt="{{ producer.name }}" />
-    </div>
-  </div>
-  {% else %}
+<div style="padding: 0 80px 80px;">
+  {% for producer in produzentinnen.items %}
   <div class="person-card {{ producer.background }}">
     <div class="card-image">
       <img src="{{ producer.image }}" alt="{{ producer.name }}" />
@@ -38,9 +25,9 @@ activePage: produzentinnen
       <h2 class="person-name">{{ producer.name }}</h2>
       <p class="person-text">{{ producer.text | nl2br | safe }}</p>
       <div class="btn-group">
-        <a href="/produkte/" class="btn {{ 'btn-white' if producer.background == 'bg-blue' else '' }}">Zum Angebot</a>
+        <a href="/anfrage/" class="btn">Anfrage senden</a>
       </div>
     </div>
   </div>
-  {% endif %}
-{% endfor %}
+  {% endfor %}
+</div>

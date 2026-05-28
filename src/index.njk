@@ -15,8 +15,8 @@ activePage: home
 
 <section style="text-align:center; padding: 72px 80px;">
   <div class="section-center">
-    <h2 class="section-title">Das sind wir</h2>
-    <p class="section-text-large">{{ home.about_text }}</p>
+    <h2 class="section-title" style="font-weight:normal;">Das sind wir</h2>
+    <p class="section-text-large" style="font-style:italic; font-size:1.2rem;">{{ home.about_text }}</p>
     <div class="tags">
       <a href="/produzentinnen/" class="tag">Produzent:innen</a>
       <a href="/team/" class="tag">Team</a>
@@ -26,8 +26,8 @@ activePage: home
 
 <div class="two-col" id="haus-am-see">
   <div class="two-col-content">
-    <h2 class="section-title">Haus am See</h2>
-    <p class="section-text">{{ home.haus_am_see_text }}</p>
+    <h2 class="section-title" style="font-weight:normal;">Haus am See</h2>
+    <p class="section-text-large" style="font-style:normal; font-size:1.2rem;">{{ home.haus_am_see_text }}</p>
     <div class="btn-group">
       <a href="/sommer/" class="btn">Sommer – Mai bis September</a>
       <a href="/winter/" class="btn">Winter – Oktober bis April</a>
@@ -48,4 +48,11 @@ activePage: home
   </div>
 </div>
 
-{# Produkte-Sektion deaktiviert – wird später wieder aktiviert #}
+<img class="full-image" src="{{ home.produkte_full_image }}" alt="Frisches buntes Gemüse" />
+
+<section style="text-align:center; padding: 64px 80px;">
+  <div class="section-center">
+    <h2 class="section-title" style="font-weight:normal;">Produkte</h2>
+    <p class="section-text-large" style="font-style:italic; font-size:1.2rem;">Gemeinsam mit unseren Produzent:innen und Partner:innen entstehen Produkte. Mit viel Freude entwickelt, für den Alltag gemacht und natürlich im Geschmack.</p>
+  </div>
+</section>

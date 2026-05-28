@@ -26,9 +26,7 @@ collections:
           - { label: "Events Titel", name: "events_title", widget: "string" }
           - { label: "Events Text", name: "events_text", widget: "text" }
           - { label: "Events Bild", name: "events_image", widget: "image" }
-          - { label: "Produkte Intro", name: "produkte_intro", widget: "text" }
           - { label: "Produkte Vollbild", name: "produkte_full_image", widget: "image" }
-          - { label: "Produkte Text", name: "produkte_text", widget: "text" }
 
   - name: "produzentinnen"
     label: "Produzent:innen"
@@ -56,7 +54,6 @@ collections:
                   - { label: "Tiefblau", value: "bg-tiefblau" }
                   - { label: "Aubergine", value: "bg-aubergine" }
                   - { label: "Hellgrün", value: "bg-green-light" }
-              - { label: "Bild links (umgekehrt)", name: "reversed", widget: "boolean", default: false }
 
   - name: "haus_am_see"
     label: "Haus am See"
@@ -121,6 +118,56 @@ collections:
                   - { label: "Hellgrün", value: "bg-green-light" }
           - { label: "Weitere Produkte Titel", name: "more_title", widget: "string" }
           - { label: "Weitere Produkte Text", name: "more_text", widget: "text" }
+
+  - name: "sommer"
+    label: "Sommer"
+    files:
+      - label: "Sommer Seite"
+        name: "sommer"
+        file: "src/_data/sommer.json"
+        fields:
+          - { label: "Hero Bild", name: "hero_image", widget: "image" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - label: "Slider Bilder"
+            name: "slider_images"
+            widget: "list"
+            fields:
+              - { label: "Bild", name: "url", widget: "image" }
+              - { label: "Beschreibung", name: "alt", widget: "string" }
+          - { label: "Kontaktperson Name", name: "contact_name", widget: "string" }
+          - { label: "Kontaktperson Text", name: "contact_text", widget: "text" }
+          - { label: "Kontaktperson Foto", name: "contact_image", widget: "image" }
+          - label: "Leistungen (Bullets)"
+            name: "contact_bullets"
+            widget: "list"
+            field: { label: "Punkt", name: "item", widget: "string" }
+          - { label: "Buchung Titel", name: "booking_title", widget: "string" }
+          - { label: "Buchung Text", name: "booking_text", widget: "text" }
+
+  - name: "winter"
+    label: "Winter"
+    files:
+      - label: "Winter Seite"
+        name: "winter"
+        file: "src/_data/winter.json"
+        fields:
+          - { label: "Hero Bild", name: "hero_image", widget: "image" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - label: "Slider Bilder"
+            name: "slider_images"
+            widget: "list"
+            fields:
+              - { label: "Bild", name: "url", widget: "image" }
+              - { label: "Beschreibung", name: "alt", widget: "string" }
+          - { label: "Kontaktperson Name", name: "contact_name", widget: "string" }
+          - { label: "Kontaktperson Text", name: "contact_text", widget: "text" }
+          - { label: "Kontaktperson Foto", name: "contact_image", widget: "image" }
+          - label: "Leistungen (Bullets)"
+            name: "contact_bullets"
+            widget: "list"
+            field: { label: "Punkt", name: "item", widget: "string" }
+          - { label: "Buchung Titel", name: "booking_title", widget: "string" }
+          - { label: "Buchung Text", name: "booking_text", widget: "text" }
 
   - name: "team"
     label: "Team"

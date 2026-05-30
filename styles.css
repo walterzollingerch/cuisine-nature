@@ -415,7 +415,7 @@ section {
 
 .team-card-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   margin-bottom: 32px;
   border-radius: 0;
@@ -425,6 +425,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .person-text {

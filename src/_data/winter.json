@@ -1,5 +1,5 @@
 {
-  "hero_image": "/uploads/bildschirmfoto-2026-05-12-um-17.29.11.png",
+  "hero_image": "/uploads/winter-hero.jpg",
   "intro_text": "Von Oktober bis April bietet das Haus am See eine warme, stimmungsvolle Atmosphäre. Kaminfeuer, edles Interieur und unsere saisonale Küche machen jeden Winteranlass zu einem besonderen Erlebnis.",
   "contact_name": "Frau Veronica Cardillo",
   "contact_text": "Veronica plant Ihr Winterevent mit derselben Leidenschaft und Liebe zum Detail – damit auch die kalte Jahreszeit unvergesslich wird.",
@@ -11,14 +11,9 @@
   "booking_title": "Winter-Event anfragen",
   "booking_text": "Oktober bis April: Erleben Sie das Haus am See in winterlicher Stimmung. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.",
   "slider_images": [
-    {
-      "url": "/uploads/Bildschirmfoto 2026-05-11 um 15.32.04.png",
-      "alt": "Winter Abendstimmung"
-    },
-    {
-      "url": "/uploads/bildschirmfoto-2026-05-12-um-17.30.05.png",
-      "alt": "Haus im Winter"
-    }
+    { "url": "/uploads/winter-karussell-1.jpg", "alt": "Winter am See 1" },
+    { "url": "/uploads/winter-karussell-2.jpg", "alt": "Winter am See 2" },
+    { "url": "/uploads/winter-karussell-3.jpg", "alt": "Winter am See 3" }
   ],
-  "contact_image": "/uploads/1730112761588.jpeg"
+  "contact_image": "/uploads/veronica.jpg"
 }

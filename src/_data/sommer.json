@@ -1,5 +1,5 @@
 {
-  "hero_image": "/uploads/bildschirmfoto-2026-05-12-um-17.29.11.png",
+  "hero_image": "/uploads/sommer-hero.jpg",
   "intro_text": "Von Mai bis September verwandelt sich das Haus am See in einen sommerlichen Genussort. Terrasse, Garten und die direkte Seelage schaffen eine unvergessliche Atmosphäre für Ihre Veranstaltung.",
   "contact_name": "Frau Veronica Cardillo",
   "contact_text": "Veronica begleitet Sie durch die Planung Ihres Sommerevents – von der ersten Idee bis zum letzten Gast.",
@@ -11,14 +11,12 @@
   "booking_title": "Sommer-Event anfragen",
   "booking_text": "Mai bis September: Geniessen Sie Events unter freiem Himmel direkt am Zürichsee. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.",
   "slider_images": [
-    {
-      "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80",
-      "alt": "Sommer Event"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80",
-      "alt": "Sommerabend am See"
-    }
+    { "url": "/uploads/sommer-karussell-1.jpg", "alt": "Sommer am See 1" },
+    { "url": "/uploads/sommer-karussell-2.jpg", "alt": "Sommer am See 2" },
+    { "url": "/uploads/sommer-karussell-3.jpg", "alt": "Sommer am See 3" },
+    { "url": "/uploads/sommer-karussell-4.jpg", "alt": "Sommer am See 4" },
+    { "url": "/uploads/sommer-karussell-5.jpg", "alt": "Sommer am See 5" },
+    { "url": "/uploads/sommer-karussell-6.jpg", "alt": "Sommer am See 6" }
   ],
-  "contact_image": "/uploads/1730112761588.jpeg"
+  "contact_image": "/uploads/veronica.jpg"
 }

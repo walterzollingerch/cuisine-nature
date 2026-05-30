@@ -8,3 +8,5 @@ _site/
 # Local Netlify folder
 .netlify
 .vercel
+uploads/Bilder/
+uploads/Bilder-*.zip

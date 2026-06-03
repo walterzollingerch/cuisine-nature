@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     <p style="font-family:sans-serif;">Mit freundlichen Grüssen<br/>Cuisine Nature AG</p>
   `);
 
-  await sendEmail('zollinger@tomtalent.ch', 'Neue Newsletter-Anmeldung (ausstehend)', `
+  await sendEmail('veronica.cardillo@cuisinenature.ch', 'Neue Newsletter-Anmeldung (ausstehend)', `
     <p><strong>${vorname} ${nachname}</strong> (${email}) hat sich angemeldet. Bestätigung ausstehend.</p>
   `);
 

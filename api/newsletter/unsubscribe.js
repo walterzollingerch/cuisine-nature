@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     <p style="font-family:sans-serif;color:#666;">Auf Wiedersehen und herzliche Grüsse<br/>Cuisine Nature AG</p>
   `);
 
-  await sendEmail('zollinger@tomtalent.ch', 'Newsletter-Abmeldung', `
+  await sendEmail('veronica.cardillo@cuisinenature.ch', 'Newsletter-Abmeldung', `
     <p><strong>${email}</strong> hat sich vom Newsletter abgemeldet.</p>
   `);
 

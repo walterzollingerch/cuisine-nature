@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   if (!name || !email || !nachricht) return res.status(400).json({ error: 'Pflichtfelder fehlen' });
 
   // E-Mail an Cuisine Nature
-  await sendEmail('zollinger@tomtalent.ch', `Neue Anfrage von ${name}`, `
+  await sendEmail('veronica.cardillo@cuisinenature.ch', `Neue Anfrage von ${name}`, `
     <p><strong>Name:</strong> ${name}</p>
     <p><strong>E-Mail:</strong> ${email}</p>
     ${telefon ? `<p><strong>Telefon:</strong> ${telefon}</p>` : ''}

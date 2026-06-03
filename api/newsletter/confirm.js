@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     <p style="font-size:11px;color:#999;font-family:sans-serif;"><a href="${unsubUrl(email)}" style="color:#999;">Newsletter abbestellen</a></p>
   `);
 
-  await sendEmail('zollinger@tomtalent.ch', 'Newsletter-Anmeldung bestätigt', `
+  await sendEmail('veronica.cardillo@cuisinenature.ch', 'Newsletter-Anmeldung bestätigt', `
     <p><strong>${vorname} ${nachname}</strong> (${email}) hat die Newsletter-Anmeldung bestätigt.</p>
   `);
 

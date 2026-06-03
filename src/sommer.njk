@@ -11,11 +11,11 @@ activePage: haus-am-see
 <section style="text-align:center; padding: 72px 80px;">
   <div class="section-center">
     <h1 class="section-title" style="font-weight:normal;">Sommer – Mai bis September</h1>
-    <p class="section-text-large" style="font-style:italic; font-size:1.2rem;">{{ sommer.intro_text | nl2br | safe }}</p>
+    <p class="section-text-large">{{ sommer.intro_text | nl2br | safe }}</p>
   </div>
 </section>
 
-<div class="slider" id="slider">
+<div class="slider" id="slider" style="margin: 0 80px 48px;">
   <div class="slider-track" id="sliderTrack">
     {% for slide in sommer.slider_images %}
     <img src="{{ slide.url }}" alt="{{ slide.alt }}" />
@@ -30,28 +30,11 @@ activePage: haus-am-see
   </div>
 </div>
 
-<div class="two-col bg-green-light">
-  <div class="two-col-content">
-    <h2 class="section-title">{{ sommer.contact_name }}</h2>
-    <p class="section-text">{{ sommer.contact_text }}</p>
-    <ul class="bullets">
-      {% for bullet in sommer.contact_bullets %}
-      <li>{{ bullet }}</li>
-      {% endfor %}
-    </ul>
-    <div class="btn-group">
-      <a href="/anfrage/" class="btn">Kontakt aufnehmen</a>
-    </div>
-  </div>
-  <div class="two-col-image">
-    <img src="{{ sommer.contact_image }}" alt="{{ sommer.contact_name }}" />
-  </div>
-</div>
 
 <section style="text-align:center; padding: 64px 80px; background: var(--bg-light);">
   <div class="section-center">
-    <h2 class="section-title">{{ sommer.booking_title }}</h2>
-    <p class="section-text">{{ sommer.booking_text | nl2br | safe }}</p>
+    <h2 class="section-title" style="font-weight:normal;">{{ sommer.booking_title }}</h2>
+    <p class="person-text">{{ sommer.booking_text | nl2br | safe }}</p>
     <div class="btn-group" style="justify-content: center; margin-top: 32px;">
       <a href="/anfrage/" class="btn btn-dark">Anfrage senden</a>
       <a href="/winter/" class="btn">Winter ansehen</a>

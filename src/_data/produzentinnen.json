@@ -10,28 +10,32 @@
       "text": "Regina und ihr Team setzen auf die Kraft von Millionen Mikroorganismen und natürlichen Schädlingsbekämpfern: quakende Laufenten auf den Feldern und in Laubhaufen versteckte Igel. \nAuf dem Hof, am höchsten Punkt im Hirzel, wachsen die Kälber bei ihren Müttern auf grünen Weiden auf und dürfen auch dort sterben. Regina selbst nimmt die Hofschlachtung vor. Respektvoll und stressfrei.\nGefüttert werden die Tiere mit hofeigenem Gras und Heu. Ihr Mist wird als Kompost genutzt. Ein geschlossener Kreislauf.\n",
       "image": "/uploads/zalpenblick.jpg",
       "background": "bg-salbei",
-      "reversed": false
+      "reversed": false,
+      "url": "https://www.zalpenblick.ch/"
     },
     {
       "name": "Slow Grow",
       "text": "Sie haben die «Mosaik-Landwirtschaft» entwickelt und betreiben sie bis heute. Auf über 20 Hektaren in Gossau und Mönchaltorf sowie auf weiteren 40 Hektaren am Zürichberg baut Slow Grow Gemüse, Acker- und Spezialkulturen an. \nMit dem Projekt «HofLabor» erforscht das Team gemeinsam mit Hochschulen, Fachleuten und Partner:innen immer wieder neue Ansätze der regenerativen Landwirtschaft und macht sie auch für andere Betriebe zugänglich. Für dieses Engagement wurden sie mehrfach ausgezeichnet.\n",
       "image": "/uploads/slowgrow.jpg",
       "background": "bg-hellblau",
-      "reversed": true
+      "reversed": true,
+      "url": "https://www.slowgrow.ch/"
     },
     {
       "name": "Terramay",
       "text": "Wir sind Teil der Tom Talent Gruppe. Die Philosophie der Gruppe ist es, kreatives Schaffen durch nachhaltiges und konsequentes Unternehmertum zu fördern. Zu Tom Talent gehört auch Terramay, eine 560 Hektar grosse Farm im portugiesischen Dorf Rosário. Als vor sechs Jahren dort gestartet wurde, glich das Land einer Wüste. Ausser Gras, Büschen, einigen Olivenbäumen und vielen Korkeichen gab es kaum etwas.\nMit Methoden aus der regenerativen Landwirtschaft konnten wir den Boden wieder fruchtbar machen. Es entstand die Farm Terramay, die bis heute von  David und seinem Team betrieben wird. Sie teilen unsere Erfahrungen mit der Gemeinschaft vor Ort und wir hier in unserer Cuisine nature. \n",
       "image": "/uploads/terramay.jpg",
       "background": "bg-green-light",
-      "reversed": false
+      "reversed": false,
+      "url": "https://www.terramay.com/"
     },
     {
       "reversed": true,
       "name": "Paul Blume",
       "text": "Paul von Blumen Wein ist bekannt für seine biodynamischen Weine aus kleinen, sorgfältig ausgewählten Weingütern. Seine Leidenschaft gilt ebenso alkoholfreien Alternativen, die denselben Anspruch verfolgen: Produkte, die verantwortungsvoll entstehen, inspirieren und lange nachwirken.",
       "image": "/uploads/paul-blume.jpg",
-      "background": "bg-aubergine"
+      "background": "bg-salbei",
+      "url": "https://www.blume-wein.ch/wir"
     }
   ]
 }

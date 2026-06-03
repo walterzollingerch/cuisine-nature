@@ -11,7 +11,7 @@ activePage: produzentinnen
 <section style="text-align:center; padding: 72px 80px;">
   <div class="section-center">
     <h1 class="section-title" style="font-weight:normal;">Produzent:innen</h1>
-    <p class="section-text-large" style="font-style:italic; font-size:1.2rem;">{{ produzentinnen.intro_text }}</p>
+    <p class="section-text-large">{{ produzentinnen.intro_text }}</p>
   </div>
 </section>
 
@@ -25,7 +25,7 @@ activePage: produzentinnen
       <h2 class="person-name">{{ producer.name }}</h2>
       <p class="person-text">{{ producer.text | nl2br | safe }}</p>
       <div class="btn-group">
-        <a href="/anfrage/" class="btn">Anfrage senden</a>
+        <a href="{{ producer.url }}" class="btn" target="_blank" rel="noopener">Mehr</a>
       </div>
     </div>
   </div>

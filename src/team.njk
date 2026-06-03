@@ -6,7 +6,7 @@ activePage: team
 
 <section style="text-align:center; padding: 100px 80px 72px;">
   <div class="section-center">
-    <h1 class="section-title">Team</h1>
+    <h1 class="section-title" style="font-weight:normal;">Team</h1>
     <p class="section-text">{{ team.intro }}</p>
   </div>
 </section>
@@ -21,7 +21,7 @@ activePage: team
     {% endif %}
     <div class="team-card-content">
       <h2 class="person-name">{{ member.name }}</h2>
-      <p class="section-text">{{ member.text | nl2br | safe }}</p>
+      <p class="person-text">{{ member.text | nl2br | safe }}</p>
     </div>
   </div>
   {% endfor %}

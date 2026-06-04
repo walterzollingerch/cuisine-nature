@@ -194,7 +194,7 @@ section {
 
 .section-center {
   text-align: center;
-  max-width: 760px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -219,7 +219,7 @@ section {
   font-style: italic;
   line-height: 1.7;
   font-size: 2rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -824,9 +824,15 @@ footer {
 
   .two-col,
   .person-card,
+  .person-card:nth-child(even),
   .events-section,
   .products-grid {
     grid-template-columns: 1fr;
+  }
+
+  .person-card:nth-child(even) .card-image,
+  .person-card:nth-child(even) .card-text {
+    order: unset;
   }
 
   .two-col-content,
@@ -878,5 +884,107 @@ footer {
 
   .footer-brand-wrapper {
     padding: 16px 32px;
+  }
+
+  .footer-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 32px 40px;
+    gap: 24px;
+  }
+
+  .footer-meta {
+    align-items: flex-start;
+  }
+
+  .footer-newsletter-row {
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 32px 32px;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  /* Schriftgrössen */
+  .section-text-large {
+    font-size: 1.2rem;
+  }
+
+  .section-text {
+    font-size: 1.1rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+
+  .person-name {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  /* Bilder */
+  .full-image {
+    height: 300px;
+  }
+
+  .page-hero {
+    height: 300px;
+  }
+
+  .slider {
+    height: 300px;
+    margin: 0 0 32px !important;
+  }
+
+  .two-col-image img {
+    height: 260px;
+  }
+
+  .events-image img {
+    height: 260px;
+  }
+
+  /* Sektionen */
+  section {
+    padding: 48px 24px;
+  }
+
+  .two-col-content {
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .events-content {
+    padding: 40px 24px;
+  }
+
+  /* Buttons */
+  .btn-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Produzenten */
+  .person-card .card-image {
+    padding: 24px 24px 0;
+  }
+
+  .person-card:nth-child(even) .card-image {
+    padding: 24px 24px 0;
+  }
+
+  .person-card .card-text {
+    padding: 24px;
   }
 }

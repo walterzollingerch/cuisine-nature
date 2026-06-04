@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("uploads");
   eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
 
   eleventyConfig.addFilter("nl2br", (str) =>
     str ? str.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>") : ""

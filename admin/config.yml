@@ -134,13 +134,6 @@ collections:
             fields:
               - { label: "Bild", name: "url", widget: "image" }
               - { label: "Beschreibung", name: "alt", widget: "string" }
-          - { label: "Kontaktperson Name", name: "contact_name", widget: "string" }
-          - { label: "Kontaktperson Text", name: "contact_text", widget: "text" }
-          - { label: "Kontaktperson Foto", name: "contact_image", widget: "image" }
-          - label: "Leistungen (Bullets)"
-            name: "contact_bullets"
-            widget: "list"
-            field: { label: "Punkt", name: "item", widget: "string" }
           - { label: "Buchung Titel", name: "booking_title", widget: "string" }
           - { label: "Buchung Text", name: "booking_text", widget: "text" }
 
@@ -159,13 +152,6 @@ collections:
             fields:
               - { label: "Bild", name: "url", widget: "image" }
               - { label: "Beschreibung", name: "alt", widget: "string" }
-          - { label: "Kontaktperson Name", name: "contact_name", widget: "string" }
-          - { label: "Kontaktperson Text", name: "contact_text", widget: "text" }
-          - { label: "Kontaktperson Foto", name: "contact_image", widget: "image" }
-          - label: "Leistungen (Bullets)"
-            name: "contact_bullets"
-            widget: "list"
-            field: { label: "Punkt", name: "item", widget: "string" }
           - { label: "Buchung Titel", name: "booking_title", widget: "string" }
           - { label: "Buchung Text", name: "booking_text", widget: "text" }
 

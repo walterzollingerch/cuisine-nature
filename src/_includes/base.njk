@@ -72,6 +72,12 @@
 
   </footer>
 
+  <nav class="mobile-bottom-nav">
+    <a href="/produzentinnen/" class="mobile-bottom-nav-item {% if activePage == 'produzentinnen' %}active{% endif %}">Produzent:innen</a>
+    <a href="/#haus-am-see" class="mobile-bottom-nav-item {% if activePage == 'haus-am-see' %}active{% endif %}">Haus am See</a>
+    <a href="/team/" class="mobile-bottom-nav-item {% if activePage == 'team' %}active{% endif %}">Team</a>
+  </nav>
+
   <script>
     document.getElementById('newsletter-form')?.addEventListener('submit', async function(e) {
       e.preventDefault();

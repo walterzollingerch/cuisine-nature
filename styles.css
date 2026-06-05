@@ -827,15 +827,14 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .mobile-bottom-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background: var(--text);
     z-index: 1000;
-    justify-content: space-around;
-    align-items: center;
     padding: 12px 8px 20px;
   }
 
@@ -847,7 +846,9 @@ footer {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
-    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-bottom-nav-item.active {

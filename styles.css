@@ -39,6 +39,7 @@
   --hellblau: #00AAE3;
   --tiefblau: #0756C2;
   --aubergine: #5E1A3B;
+  --gelb: #D4B96A;
 }
 
 * {
@@ -96,7 +97,7 @@ nav {
 }
 
 .nav-links a {
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;
@@ -120,7 +121,7 @@ nav {
   padding: 10px 26px;
   border-radius: 50px;
   font-family: 'GT Alpina', serif;
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   cursor: pointer;
   text-transform: uppercase;
@@ -155,7 +156,7 @@ nav {
   font-size: 2.0rem;
   max-width: 640px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.2;
 }
 
 /* ===== PAGE HERO (full image top) ===== */
@@ -211,13 +212,13 @@ section {
 
 .section-text {
   font-style: italic;
-  line-height: 1.8;
+  line-height: 1.2;
   font-size: 2rem;
 }
 
 .section-text-large {
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.2;
   font-size: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -234,9 +235,9 @@ section {
 
 .tag {
   border: 1.5px solid var(--text);
-  padding: 7px 22px;
+  padding: 11px 33px;
   border-radius: 50px;
-  font-size: 11px;
+  font-size: 17px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
@@ -258,7 +259,7 @@ section {
 }
 
 .two-col-content {
-  padding: 80px 72px;
+  padding: 80px 48px 80px 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -268,12 +269,15 @@ section {
 }
 
 .two-col-image {
-  padding: 32px;
+  padding: 32px 24px 32px 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .two-col-image img {
   width: 100%;
-  height: 380px;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -282,15 +286,16 @@ section {
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
-  padding: 7px 22px;
+  padding: 11px 33px;
   border-radius: 50px;
   font-family: 'GT Alpina', serif;
-  font-size: 11px;
+  font-size: 17px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
   border: 1.5px solid var(--text);
   color: var(--text);
   background: transparent;
@@ -354,6 +359,10 @@ section {
   color: var(--white);
 }
 
+.bg-gelb {
+  background: var(--gelb);
+}
+
 .bg-light {
   background: var(--bg-light);
 }
@@ -361,12 +370,13 @@ section {
 /* ===== PERSON CARD ===== */
 .person-card {
   display: grid;
-  grid-template-columns: 55fr 45fr;
+  grid-template-columns: 35fr 65fr;
+  gap: 40px;
   margin-bottom: 0;
 }
 
 .person-card:nth-child(even) {
-  grid-template-columns: 45fr 55fr;
+  grid-template-columns: 65fr 35fr;
 }
 
 .person-card:nth-child(even) .card-image {
@@ -378,7 +388,7 @@ section {
 }
 
 .person-card .card-text {
-  padding: 48px 56px;
+  padding: 48px 56px 48px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,18 +396,22 @@ section {
 
 .person-card .card-image {
   overflow: hidden;
-  padding: 32px 32px 32px 80px;
+  padding: 32px 2px 32px 32px;
   display: flex;
   align-items: center;
 }
 
 .person-card:nth-child(even) .card-image {
-  padding: 32px 80px 32px 32px;
+  padding: 32px 32px 32px 2px;
   justify-content: flex-end;
 }
 
+.person-card:nth-child(even) .card-text {
+  padding: 48px 8px 48px 56px;
+}
+
 .person-card .card-image img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 0;
 }
@@ -447,14 +461,14 @@ section {
 .person-text {
   font-style: normal;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 32px;
 }
 
 /* ===== EVENTS SECTION ===== */
 .events-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   gap: 0;
 }
 
@@ -464,7 +478,7 @@ section {
 
 .events-image img {
   width: 100%;
-  height: 380px;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -531,7 +545,7 @@ footer {
 
 .footer-newsletter-label {
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 
@@ -546,7 +560,7 @@ footer {
   padding: 10px 20px;
   border-radius: 50px;
   font-family: 'GT Alpina', serif;
-  font-size: 11px;
+  font-size: 17px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   outline: none;
@@ -567,7 +581,7 @@ footer {
   padding: 10px 28px;
   border-radius: 50px;
   font-family: 'GT Alpina', serif;
-  font-size: 11px;
+  font-size: 17px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -604,12 +618,12 @@ footer {
   padding: 0 80px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 40px;
 }
 
 .footer-address {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
 
@@ -622,7 +636,8 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
-  font-size: 0.95rem;
+  font-size: 1.43rem;
+  text-align: right;
 }
 
 .footer-bottom {

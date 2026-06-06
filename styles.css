@@ -836,24 +836,30 @@ footer {
     right: 0;
     background: var(--text);
     z-index: 1000;
-    padding: 12px 8px 20px;
+    padding: 10px 0 22px;
   }
 
   .mobile-bottom-nav-item {
     color: var(--white);
     text-decoration: none;
     font-family: 'GT Alpina Typewriter', monospace;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 8px 4px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .mobile-bottom-nav-item:last-child {
+    border-right: none;
   }
 
   .mobile-bottom-nav-item.active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   body {
